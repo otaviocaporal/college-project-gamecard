@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components{
+            body{
+                @apply bg-gray-950 md:mr-[20vw] md:ml-[20vw] xl:mr-[5vw] xl:ml-[5vw] md:mt-10 md:mb-10;
+            }
+            p {
+                @apply text-white;
+            }
+            .cartao {
+                @apply flex bg-gray-800 md:rounded-lg sm:text-sm lg:text-base xl:text-lg text-center sm:justify-center items-center flex-col xl:grid xl:grid-cols-2;
+            }
+            .margemtb {
+                @apply  mt-2 lg:mt-3 xl:mt-4 sm:mb-1 lg:mb-2 xl:mb-4;
+            }
+            .divtopicos {
+                @apply flex bg-gray-800 rounded-lg p-6 text-center justify-center items-center flex-col mr-[5vw] ml-[5vw];
+            }
+            .topicos {
+                @apply sm:text-sm lg:text-base xl:text-lg bg-gray-900 rounded-lg pt-1 pb-1 pl-3 pr-3 text-white mt-3 mb-3;
+            }
+            .topicosp {
+                @apply sm:text-sm lg:text-lg xl:text-xl text-white;
+            }
+        }
+    </style>
+    <title>Site com Tailwind</title>
+</head>
+
+<body class="font-[poppins]">
+    <article class="cartao margemtb xl:grid xl:grid-cols-2 xl:gap-8">
+        <div class="flex flex-col gap-4 xl:gap-6">
+            <!-- nome, imagem, função -->
+            <div class="bg-gray-900 rounded-lg text-center flex flex-col items-center ml-[5vw] mr-[5vw] pt-1 pb-1 margemtb">
+                <h3 class="text-white text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl margemtb">CONTRATERRORISTAS</h3>
+                <img class="w-60 sm:w-60 md:w-70 lg:w-80 xl:w-[28rem]" src="../imgs/counter-strike-v0-1z419eocjjvd1.png"
+                    alt="CONTRATERRORISTA">
+                <p class="text-sm sm:text-base lg:text-md xl:text-lg margemtb">Função: ⚜️ Defensor / Tático</p>
+            </div>
+            <!-- descrição (ao lado da imagem em lg) -->
+            <div class="divtopicos lg:flex lg:flex-col lg:items-center lg:gap-6">
+                <h3 class="topicos">DESCRIÇÃO</h3>
+                <p class="topicosp margemtb text-left">A equipe dos Contraterroristas trabalha para impedir que os
+                    terroristas sejam capazes de realizar um ataque com bombas, nos "bombs" dos diversos mapas do jogo
+                    Counter-Strike 2.
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-6">
+            <!-- habilidades -->
+            <div class="divtopicos">
+                <h3 class="topicos">HABILIDADES UTILITÁRIAS</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5">
+                    <div class="bg-gray-900 text-white p-4 rounded-lg text-center">
+                        <img class="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28 mx-auto" src="../imgs/Hegrenadehud_csgo.webp" alt="Granada Explosiva">
+                        <p>6 - Granada Explosiva</p>
+                    </div>
+                    <div class="bg-gray-900 text-white p-4 rounded-lg text-center">
+                        <img class="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28 mx-auto" src="../imgs/Flashbanghud_csgo.webp" alt="Granada de Luz">
+                        <p>7 - Granada de Luz</p>
+                    </div>
+                    <div class="bg-gray-900 text-white p-4 rounded-lg text-center">
+                        <img class="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28 mx-auto" src="../imgs/Smokegrenadehud_csgo.webp" alt="Granada de Fumaça">
+                        <p>8 - Granada de Fumaça</p>
+                    </div>
+                    <div class="bg-gray-900 text-white p-4 rounded-lg text-center">
+                        <img class="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28 mx-auto" src="../imgs/Decoyhud_csgo.webp" alt="Granada de Distração">
+                        <p>9 - Granada de Distração</p>
+                    </div>
+                    <div class="bg-gray-900 text-white p-4 rounded-lg text-center"> 
+                        <img class="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28 mx-auto" src="../imgs/Incgrenadehud_csgo.webp" alt="Granada Incendiária">
+                        <p>0 - Granada Incendiária</p>
+                    </div>
+                </div>
+            </div>
+            <!-- atributos -->
+            <div class="divtopicos">
+                <h3 class="topicos">ATRIBUTOS</h3>
+                <ul class="grid grid-cols-1 gap-4">
+                    <li class="topicosp">Vida ❤️: 100</li>
+                    <li class="topicosp">Colete 🛡️: 0 - 100</li>
+                </ul>
+            </div>
+
+        </div>
+    </article>
+
+</body>
+
+</html>
